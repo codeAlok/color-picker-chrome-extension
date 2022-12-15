@@ -1,4 +1,6 @@
 const btn = document.querySelector('.changeColorBtn');
+const colorGrid = document.querySelector('.colorGrid');
+const colorValue = document.querySelector('.colorValue');
 
 // extension popup tab + (console)
 btn.addEventListener('click', async () => {
@@ -9,6 +11,17 @@ btn.addEventListener('click', async () => {
     chrome.scripting.executeScript( {
         target: { tabId: tab.id },
         function: pickColor,
+    },
+    async (injectionResults) => {
+        const [data] = injectionResults;
+
+        if(data.result) {
+            const color = data.result.sRGBHex;
+            colorGrid.style.backgroundColor = color; // show color 
+            colorValue.innerText = color; // show hex code
+        }
+
+        console.log(colorGrid);
     });
 })
 
@@ -17,9 +30,7 @@ async function pickColor() {
     try {
         // EyeDropper api from browser
         const eyeDropper = new EyeDropper();
-        const selectedColor = await eyeDropper.open(); // return selected color
-        
-        console.log(selectedColor);
+        return await eyeDropper.open(); // return selected color      
     }
     catch(err) {
         console.error(err);
