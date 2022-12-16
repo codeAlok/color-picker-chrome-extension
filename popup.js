@@ -19,6 +19,14 @@ btn.addEventListener('click', async () => {
             const color = data.result.sRGBHex;
             colorGrid.style.backgroundColor = color; // show color 
             colorValue.innerText = color; // show hex code
+
+            // copy hex code to clipboard
+            try {
+                await navigator.clipboard.writeText(color);
+            }
+            catch(err) {
+                console.log(err);
+            }
         }
 
         console.log(colorGrid);
