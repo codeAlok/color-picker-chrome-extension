@@ -14,8 +14,11 @@
 3. Go to **settings**
 4. Select **Extensions** tab
 5. Turn on **Developer mode**
+    ![Screenshot (27)](https://user-images.githubusercontent.com/82399781/210152293-c8168f7b-4699-4785-990a-a989d56834f7.jpg)
 6. Click on **Load unpacked**
+    ![Screenshot (28)](https://user-images.githubusercontent.com/82399781/210152310-757b0ed6-6bad-4728-bb0c-375a41d45985.jpg)
 7. Select **color-picker-chrome-extension** folder
+    ![download (1)](https://user-images.githubusercontent.com/82399781/210152496-75f7e665-040e-4d27-a2cf-00f27392c504.png)
 8. Enable This Extension (if Disabled).
 9. Now open any **tab other than google setting/home page**.
 10. Now click on **Extension icon** and select **color picker**
