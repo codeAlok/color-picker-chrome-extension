@@ -29,7 +29,7 @@
 
 14. I Hope this will help you to **get specific Color HexCode** from anywhere you want.
 
-15. Always ready for any kind of **Guidance/support**
+15. Always ready for any kind of **Guidance/support and Help.**
 
 
 **Thanks for Reading and Using this**.
